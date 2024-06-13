@@ -1,4 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:shoes_commerce/products_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -126,9 +128,9 @@ class HomePage extends StatelessWidget {
   Widget buildProducts() {
     return Container(
       margin: const EdgeInsets.only(top: 30),
-      child: const Column(
+      child: Column(
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,6 +152,8 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 25),
+          productsCard(),
         ],
       ),
     );
